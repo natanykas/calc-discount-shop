@@ -1,6 +1,6 @@
 <h1>Calculate Discount Shop</h1>
 
-Instructions:
+*Instructions*
 
 To encourage more sales of cereal boxes, a popular cereal shop decided to offer discounts on multiple purchases.
 
@@ -14,7 +14,7 @@ Note: cereal boxes from the KETO collection should be excluded from the discount
 
 Your mission is to write an API to calculate the price of any conceivable shopping cart (containing cereal boxes from multiple collections), returning the discounted price for each individual item and the final discounted price for the entire cart.some tests using RSpec.
 
-Dependencies
+*Dependencies*
 
 * Docker
 * Docker-compose
@@ -28,7 +28,7 @@ docker-compose build
 *Create your Data base*
 
 ```
-docker-compose run web rake db:create db:migrate
+docker-compose run web rake db:create
 ```
 
 *Run the project*
