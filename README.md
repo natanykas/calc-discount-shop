@@ -28,7 +28,7 @@ docker-compose build
 *Create your Data base*
 
 ```
-docker-compose run web rake db:create
+docker-compose run web rake db:create db:migrate
 ```
 
 *Run the project*
