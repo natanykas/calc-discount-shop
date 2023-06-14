@@ -1,4 +1,5 @@
-class ExceptionCollection < ApplicationRecord
+# frozen_string_literal: true
 
-    validates :name, presence: true
+class ExceptionCollection < ApplicationRecord
+  validates :name, presence: true
 end
