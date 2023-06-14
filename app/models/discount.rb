@@ -1,4 +1,5 @@
-class Discount < ApplicationRecord
+# frozen_string_literal: true
 
-    validates :quantity, :percentage, presence: true
+class Discount < ApplicationRecord
+  validates :quantity, :percentage, presence: true
 end
