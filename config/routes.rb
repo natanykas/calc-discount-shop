@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :discounts
       resources :exception_collections
+
+      post '/apply_discounts', to: 'apply_discounts#calculate'
     end
   end
 end
