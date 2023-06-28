@@ -2,6 +2,8 @@
 
 module Api
   module V1
+    # PRO: Clean controller for CRUD usage
+    # CON: Endpoints not on the requirements
     class DiscountsController < ApplicationController
       before_action :set_discount, only: %i[show update destroy]
 

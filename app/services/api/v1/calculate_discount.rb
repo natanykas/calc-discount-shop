@@ -3,11 +3,14 @@
 module Api
   module V1
     class CalculateDiscount
+      # PRO: Usage of Memery
       include Memery
 
       attr_accessor :cart_info, :line_items
 
       def initialize(cart_info)
+        # Question: What is the reason to use self.cart_info = cart_info
+        # instead of instance variables? e.g. @cart_info = cart_info
         self.cart_info = cart_info
         self.line_items = cart_info['lineItems']
       end
@@ -25,6 +28,8 @@ module Api
       private
 
       def apply_discounts
+        # CON: Could avoid mutating the original line_items object here.
+        # One solution would be to use map or to create a new object.
         line_items.each do |item|
           next item['discount'] = '0' if exception_collection.include?(item['collection'])
 
@@ -40,6 +45,8 @@ module Api
         cart_info['total'] = line_items.sum { |item| item['price'].to_f - item['discount'].to_f }.to_s
       end
 
+      # PRO: Nice usage of max in case there is more items than
+      # what is defined at the hash
       memoize def discount_percentage
         return hash_discount_info.values.max unless hash_discount_info.keys.any? { |item| item > valid_items }
 

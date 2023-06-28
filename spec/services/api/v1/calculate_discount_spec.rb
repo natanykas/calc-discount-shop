@@ -2,6 +2,9 @@
 
 require 'rails_helper'
 
+# CON: Only 1 test case for the discount calculation logic. Could
+# probably have added many other cases like when the list is empty, or
+# when there is more than 5 items for exemple.
 RSpec.describe Api::V1::CalculateDiscount do
   context 'when calculate discount' do
     before do

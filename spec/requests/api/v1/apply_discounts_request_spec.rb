@@ -2,6 +2,7 @@
 
 require 'rails_helper'
 
+# PRO: Controller tests
 RSpec.describe 'Api::V1::ApplyDiscounts', type: :request do
   describe 'POST /api/v1/apply_discounts' do
     before do
